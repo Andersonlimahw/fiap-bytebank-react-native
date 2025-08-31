@@ -1,0 +1,17 @@
+{
+  "common": {
+    "loading": "Carregando..."
+  },
+  "home": {
+    "title": "Início",
+    "welcome": "Bem-vindo",
+    "toggleTheme": "Alternar tema"
+  },
+  "settings": {
+    "title": "Configurações"
+  },
+  "auth": {
+    "signOut": "Sair"
+  }
+}
+

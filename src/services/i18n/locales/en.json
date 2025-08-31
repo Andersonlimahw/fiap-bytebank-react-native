@@ -1,0 +1,17 @@
+{
+  "common": {
+    "loading": "Loading..."
+  },
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome",
+    "toggleTheme": "Toggle theme"
+  },
+  "settings": {
+    "title": "Settings"
+  },
+  "auth": {
+    "signOut": "Sign out"
+  }
+}
+

@@ -7,11 +7,11 @@
 
 <!-- PROJECT SHIELDS -->
 
-[![npm](https://img.shields.io/npm/v/react-native-template-rocketseat-advanced.svg?label=npm%20package)](https://www.npmjs.com/package/react-native-template-rocketseat-advanced)
-[![npm](https://img.shields.io/npm/dt/react-native-template-rocketseat-advanced.svg)](https://www.npmjs.com/package/react-native-template-rocketseat-advanced)
-[![GitHub issues](https://img.shields.io/github/issues-raw/rocketseat/react-native-template-rocketseat-advanced.svg)](https://github.com/Rocketseat/react-native-template-rocketseat-advanced/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/rocketseat/react-native-template-rocketseat-advanced.svg)](https://github.com/Rocketseat/react-native-template-rocketseat-advanced/commits/master)
-[![NPM](https://img.shields.io/npm/l/react-native-template-rocketseat-advanced.svg)](https://choosealicense.com/licenses/mit)
+[![npm](https://img.shields.io/npm/v/fiap-bytebank-react-native.svg?label=npm%20package)](https://www.npmjs.com/package/fiap-bytebank-react-native)
+[![npm](https://img.shields.io/npm/dt/fiap-bytebank-react-native.svg)](https://www.npmjs.com/package/fiap-bytebank-react-native)
+[![GitHub issues](https://img.shields.io/github/issues-raw/rocketseat/fiap-bytebank-react-native.svg)](https://github.com/Rocketseat/fiap-bytebank-react-native/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/rocketseat/fiap-bytebank-react-native.svg)](https://github.com/Rocketseat/fiap-bytebank-react-native/commits/master)
+[![NPM](https://img.shields.io/npm/l/fiap-bytebank-react-native.svg)](https://choosealicense.com/licenses/mit)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -270,7 +270,7 @@ Contribuições são o que fazem a comunidade open source um lugar incrível par
 
 Para testar o template de um caminho local, coloque o caminho absoluto junto com o prefixo `file://`
 ```
-react-native init AwesomeContribution --template file:///Users/Dev/contributions/react-native-template-rocketseat-advanced
+react-native init AwesomeContribution --template file:///Users/Dev/contributions/fiap-bytebank-react-native
 ```
 
 <!-- LICENSE -->
