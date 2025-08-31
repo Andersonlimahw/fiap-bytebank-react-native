@@ -40,7 +40,7 @@ Tarefas:
 8) Configurar i18next em src/services/i18n/index.ts.
 
 Critérios:
-- Rodar com `yarn android/ios` sem erros.
+- Rodar com `npm run android/ios` sem erros.
 - Navegar entre Home e Settings.
 - Query de usuário mock retornando no Home.
 
@@ -120,7 +120,7 @@ Critérios:
 1) Siga clean code, SOLID e as melhores praticas de desenvolvimento mobile seguind MVVM
 2)  Migre o projeto atual para typescript
 3)  Garanta o funcionamento basico e completo, como build e start do projeto, ele deve estar compilando e funcional
-4) App roda com `yarn start` e `yarn android/ios`.
+4) App roda com `npm start` e `npm run android/ios`.
 5) Navegação stack/tabs funcionando.
 6) Um CRUD básico migrado.
 7) Código organizado conforme estrutura do template.

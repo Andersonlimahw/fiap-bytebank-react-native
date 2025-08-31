@@ -26,9 +26,9 @@
   "author": "Anderson Lima <andersonlimadeveloper@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "react-native start",
-    "android": "react-native run-android",
-    "ios": "react-native run-ios"
+    "start": "npx react-native start",
+    "android": "npx react-native run-android",
+    "ios": "npx react-native run-ios"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.6.1",
@@ -48,6 +48,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-typescript": "^7.24.7",
+    "@react-native-community/cli": "^20.0.1",
     "@types/react": "^18.2.48",
     "@types/react-native": "^0.73.0",
     "babel-plugin-root-import": "^6.6.0",
