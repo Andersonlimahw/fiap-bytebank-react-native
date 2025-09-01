@@ -8,6 +8,7 @@ module.exports = {
         rootPathPrefix: '~',
       },
     ],
+    // Reanimated plugin must be listed last
+    'react-native-reanimated/plugin',
   ],
 };
-

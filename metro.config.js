@@ -1,8 +1,6 @@
 /**
  * Metro configuration for React Native
- * https://github.com/facebook/react-native
- *
- * @format
+ * Adds SVG support via react-native-svg-transformer.
  */
 
 const { getDefaultConfig } = require('metro-config');
@@ -13,10 +11,11 @@ module.exports = (async () => {
   } = await getDefaultConfig();
   return {
     transformer: {
-      babelTransformerPath: require.resolve('react-native-svg-transformer'),
+      babelTransformerPath: require.resolve('react-native-svg-transformer/react-native'),
+      assetRegistryPath: require.resolve('react-native/Libraries/Image/AssetRegistry'),
     },
     resolver: {
-      assetExts: assetExts.filter(ext => ext !== 'svg'),
+      assetExts: assetExts.filter((ext) => ext !== 'svg'),
       sourceExts: [...sourceExts, 'svg'],
     },
   };
