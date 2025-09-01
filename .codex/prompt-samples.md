@@ -9,3 +9,8 @@ codex exec --full-auto -c model="gpt-5" -c reasoning="high" -c temperature="0.35
 ## Fixes:
 
 codex exec --full-auto -c model="gpt-5" -c reasoning="high" -c temperature="0.35" -c max_tokens="64000" -c filesystem.write="true" -c allow.shell="true" -c allow.git="true" ""
+
+
+## Continue default:
+
+codex exec --full-auto -c model="gpt-5" -c reasoning="high" -c temperature="0.35" -c max_tokens="64000" -c filesystem.write="true" -c allow.shell="true" -c allow.git="true" "continue with migration and real implementation do your best"

@@ -1,17 +1,22 @@
 import axios from 'axios';
 import { useAuthStore } from '~/store/app.store';
+import { auth } from '~/services/firebase';
 
 export const api = axios.create({
   baseURL: 'https://example.com/api',
 });
 
 api.interceptors.request.use(async (config) => {
-  const token = undefined; // plug token source if available
-  if (token) {
-    config.headers = {
-      ...(config.headers || {}),
-      Authorization: `Bearer ${token}`,
-    };
+  try {
+    const currentUser = auth.currentUser;
+    const token = await currentUser?.getIdToken();
+    if (token) {
+      // Preserve axios headers object shape to satisfy types
+      config.headers = config.headers ?? {};
+      (config.headers as any).Authorization = `Bearer ${token}`;
+    }
+  } catch (e) {
+    // noop
   }
   return config;
 });
@@ -27,4 +32,3 @@ api.interceptors.response.use(
 );
 
 export default api;
-

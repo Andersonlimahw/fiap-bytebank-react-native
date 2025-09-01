@@ -1,6 +1,8 @@
 {
   "common": {
-    "loading": "Carregando..."
+    "loading": "Carregando...",
+    "edit": "Editar",
+    "delete": "Excluir"
   },
   "home": {
     "title": "Início",
@@ -11,7 +13,47 @@
     "title": "Configurações"
   },
   "auth": {
-    "signOut": "Sair"
+    "title": "Entrar",
+    "email": "Email",
+    "password": "Senha",
+    "signIn": "Entrar",
+    "signOut": "Sair",
+    "signInWithGoogle": "Continuar com Google",
+    "signInWithApple": "Continuar com Apple"
+  },
+  "accounts": {
+    "title": "Contas",
+    "namePlaceholder": "Nome da conta",
+    "balancePlaceholder": "Saldo inicial",
+    "add": "Adicionar Conta",
+    "update": "Atualizar Conta",
+    "balance": "Saldo",
+    "viewTransactions": "Ver Transações"
+  },
+  "transactions": {
+    "title": "Transações",
+    "valuePlaceholder": "Valor",
+    "typePlaceholder": "Tipo (DEPOSIT/WITHDRAW/TRANSFER)",
+    "fromPlaceholder": "De",
+    "toPlaceholder": "Para",
+    "add": "Adicionar Transação",
+    "update": "Atualizar Transação",
+    "from": "De",
+    "to": "Para"
+  },
+  "onboarding": {
+    "skip": "Pular",
+    "next": "Avançar",
+    "getStarted": "Começar",
+    "progressActive": "Etapa atual",
+    "progressInactive": "Etapa inativa",
+    "welcomeTitle": "Bem-vindo ao ByteBank",
+    "welcomeDescription": "Seu dinheiro, cartões e transferências em um lugar seguro.",
+    "securityTitle": "Segurança de nível bancário",
+    "securityDescription": "Biometria, criptografia e alertas proativos mantêm sua conta segura.",
+    "featuresTitle": "Faça mais com menos toques",
+    "featuresDescription": "Pague contas, acompanhe orçamentos e envie dinheiro em segundos.",
+    "lastTitle": "Pronto quando você estiver",
+    "lastDescription": "Vamos configurar sua conta e personalizar sua experiência."
   }
 }
-

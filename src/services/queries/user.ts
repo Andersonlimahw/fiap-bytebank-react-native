@@ -1,6 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import api from '~/services/api';
 import type { User } from '~/@types/user';
+import { auth } from '~/services/firebase';
+import { getOrCreateUserProfile, updateUserProfile as fbUpdateUser } from '~/services/firebase';
 
 const keys = {
   all: ['users'] as const,
@@ -8,10 +9,14 @@ const keys = {
 };
 
 async function fetchUser(): Promise<User> {
-  // Mocked example; replace with real call
-  // const { data } = await api.get<User>('/me');
-  // return data;
-  return Promise.resolve({ id: '1', name: 'ByteBank User', email: 'user@bytebank.com' });
+  const uid = auth.currentUser?.uid;
+  if (!uid) throw new Error('Not authenticated');
+  const fbUser = auth.currentUser;
+  const profile = await getOrCreateUserProfile(uid, {
+    name: fbUser?.displayName ?? undefined,
+    email: fbUser?.email ?? undefined,
+  });
+  return profile as User;
 }
 
 export function useUser() {
@@ -22,13 +27,14 @@ export function useUpdateUser() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: async (payload: Partial<User>) => {
-      // const { data } = await api.patch<User>('/me', payload);
-      // return data;
-      return { id: '1', name: payload.name || 'ByteBank User', email: payload.email || 'user@bytebank.com' } as User;
+      const uid = auth.currentUser?.uid;
+      if (!uid) throw new Error('Not authenticated');
+      await fbUpdateUser(uid, { name: payload.name, email: payload.email });
+      const updated = await fetchUser();
+      return updated;
     },
     onSuccess: (data) => {
       qc.setQueryData(keys.all, data);
     },
   });
 }
-

@@ -58,3 +58,7 @@ buck-out/
 angular-project
 contents
 contents/angular-project
+
+# Firebase config (local, not committed)
+src/config/firebase.local.json
+src/config/firebase.json

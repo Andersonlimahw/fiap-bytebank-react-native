@@ -41,6 +41,30 @@
 - [Licença](#licen%C3%A7a)
 - [Contato](#contato)
 
+## ByteBank RN – Migration Status (TL;DR)
+
+- Auth: Firebase Auth with Email/Password, optional Google and Apple providers. Onboarding -> Sign-In -> Tabs flow is wired with Zustand + onAuthStateChanged.
+- Data: Accounts and Transactions CRUD on Firestore. Balance auto-updates on transaction create/update/delete. React Query caches and invalidates.
+- UI: Tabs for Home, Accounts, Settings. Home shows user + account summary; Settings toggles theme and language (pt/en).
+- i18n: i18next configured with pt/en dictionaries.
+- Theming: styled-components light/dark themes; Navigation theming synced.
+- Stability: App wrapped in GestureHandlerRootView + SafeAreaProvider.
+
+### Quick Start
+
+- Install deps: `npm i`
+- iOS pods (macOS): `npm run ios:pods`
+- Firebase config: create `src/config/firebase.local.json` (see `src/config/firebase.sample.json`).
+- Start Metro: `npm start` (or `npm run start:reset` to clear cache)
+- Run Android: `npm run android`  •  Run iOS: `npm run ios`
+- Type-check: `npm run typecheck`
+
+### Firebase Providers
+
+- Google: `npm i @react-native-google-signin/google-signin` and follow native setup. Button appears automatically when the module is installed.
+- Apple (iOS): `npm i @invertase/react-native-apple-authentication` and follow native setup. Button appears automatically when the module is installed.
+
+
 <!-- ABOUT THE PROJECT -->
 
 ## Sobre o Projeto
@@ -118,6 +142,26 @@ rocketseat-advanced
 ├── .editorconfig
 ├── .eslintrc.json
 ├── .gitignore
+
+## Auth Setup (Firebase + Providers)
+
+This template includes Firebase Auth and Firestore using the modular SDK. Configure your project keys and optional social providers:
+
+- Firebase config: create `src/config/firebase.local.json` using `src/config/firebase.sample.json` as a reference, or inject `FIREBASE_*` env vars at build time. The app warns if config is missing.
+- Email/Password: works out of the box via `emailPasswordSignIn(email, password)`; the first sign-in auto-creates the user if not found.
+- Google Sign-In (optional): install `@react-native-google-signin/google-signin` and follow its Android/iOS native setup. The Sign-In screen automatically enables the button when the module is present.
+- Apple Sign-In (optional, iOS): install `@invertase/react-native-apple-authentication` and follow its iOS setup. The Sign-In screen automatically enables the button when the module is present.
+
+Notes:
+- On first launch, onboarding appears; after completing it, the Sign-In screen is shown. When authenticated, tab routes are enabled. Auth state is tracked via `onAuthStateChanged`.
+- API requests include a Firebase ID token header (`Authorization: Bearer <token>`) when available; 401 responses trigger a sign-out.
+
+## Data & CRUD (Firestore)
+
+- Accounts: stored in `accounts` with `ownerId` = current user; screens allow create/update/delete.
+- Transactions: stored in `transactions` with `accountId` and `ownerId`; screen lists and manages transactions per account.
+- Navigation: Tabs for Home/Accounts/Settings; from Accounts, open the Transactions screen for a specific account.
+- React Query caches and invalidates queries on mutations to keep UI fresh.
 ├── babel.config.js
 ├── dependencies.json
 ├── devDependencies.json

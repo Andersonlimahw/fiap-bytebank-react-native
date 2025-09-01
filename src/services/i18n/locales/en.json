@@ -1,6 +1,8 @@
 {
   "common": {
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "edit": "Edit",
+    "delete": "Delete"
   },
   "home": {
     "title": "Home",
@@ -11,7 +13,47 @@
     "title": "Settings"
   },
   "auth": {
-    "signOut": "Sign out"
+    "title": "Sign In",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "signInWithGoogle": "Continue with Google",
+    "signInWithApple": "Continue with Apple"
+  },
+  "accounts": {
+    "title": "Accounts",
+    "namePlaceholder": "Account name",
+    "balancePlaceholder": "Initial balance",
+    "add": "Add Account",
+    "update": "Update Account",
+    "balance": "Balance",
+    "viewTransactions": "View Transactions"
+  },
+  "transactions": {
+    "title": "Transactions",
+    "valuePlaceholder": "Amount",
+    "typePlaceholder": "Type (DEPOSIT/WITHDRAW/TRANSFER)",
+    "fromPlaceholder": "From",
+    "toPlaceholder": "To",
+    "add": "Add Transaction",
+    "update": "Update Transaction",
+    "from": "From",
+    "to": "To"
+  },
+  "onboarding": {
+    "skip": "Skip",
+    "next": "Next",
+    "getStarted": "Get started",
+    "progressActive": "Current step",
+    "progressInactive": "Inactive step",
+    "welcomeTitle": "Welcome to ByteBank",
+    "welcomeDescription": "All your money, cards and transfers in one secure place.",
+    "securityTitle": "Bank‑grade security",
+    "securityDescription": "Biometrics, encryption and proactive alerts keep your account safe.",
+    "featuresTitle": "Do more with less taps",
+    "featuresDescription": "Pay bills, track budgets, and send money in seconds.",
+    "lastTitle": "Ready when you are",
+    "lastDescription": "Let’s set up your account and personalize your experience."
   }
 }
-
