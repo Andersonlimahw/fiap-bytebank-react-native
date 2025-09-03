@@ -28,7 +28,8 @@
   "scripts": {
     "start": "npx react-native start",
     "start:reset": "npx react-native start --reset-cache",
-    "android": "npx react-native run-android",
+    "android": "node scripts/run-android.js",
+    "android:scaffold": "node scripts/scaffold-android.js",
     "ios": "node scripts/run-ios.js",
     "ios:pods": "[ -d ios ] && (cd ios && pod install) || echo 'ios folder not found'",
     "bundle:ios": "npx react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
